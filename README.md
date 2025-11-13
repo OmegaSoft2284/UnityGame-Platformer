@@ -43,21 +43,14 @@ Whether you’re a game developer learning Unity or building a base for your own
    git clone https://github.com/OmegaSoft2284/UnityGame-Platformer.git
 
 
-Assets/
- ├── Scripts/          # Player, Enemy, Game Manager scripts
-
- ├── Scenes/           # Game scenes (MainMenu, Level1, etc.)
-
- ├── Prefabs/          # Reusable game objects
-
- ├── Sprites/          # Characters and environment art
-
- ├── Audio/            # Sound effects and background music
-
- ├── UI/               # User interface assets
-
- └── Materials/        # Materials and shaders
-
+Assets/   
+ ├── Scripts/          # Player, Enemy, Game Manager scripts  
+ ├── Scenes/           # Game scenes (MainMenu, Level1, etc.)  
+ ├── Prefabs/          # Reusable game objects  
+ ├── Sprites/          # Characters and environment art  
+ ├── Audio/            # Sound effects and background music  
+ ├── UI/               # User interface assets  
+ └── Materials/        # Materials and shaders  
 
 
 #Learning Objectives
