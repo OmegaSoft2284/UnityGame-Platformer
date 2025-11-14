@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float moveSpeed = 7f;
     [SerializeField] public float jumpForce = 14f;
     
+    private enum MovementState  { idle, running, jumping, falling   }
+
     private Animator anim; //Used to control animations  Back or Fw
     private PlayerInput playerInput;  // Reference to PlayerInput component Keyboard and Gamepad support
     private InputAction moveAction; // Action for movement Move 
@@ -77,20 +79,36 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateAnimationState()
     {
+
+        MovementState state;
+
         if (moveInput.x > 0f)
         {
-            anim.SetBool("flgRunning", true);
+            state = MovementState.running;
             spriteRenderer.flipX = false;
 
         }
         else if (moveInput.x < 0)
         {
-            anim.SetBool("flgRunning", true);
+            state = MovementState.running;
             spriteRenderer.flipX = true;
         }
         else
         {
-            anim.SetBool("flgRunning", false);
+            state = MovementState.idle;
         }
+
+        //Jumping
+        if (rb.linearVelocity.y >0.1f)
+        {
+            state = MovementState.jumping;
+        }
+        else if (rb.linearVelocity.y < -0.1f)
+        {
+            state = MovementState.falling;
+        }
+        
+
+            anim.SetInteger("state", (int)state);
     }
 }
