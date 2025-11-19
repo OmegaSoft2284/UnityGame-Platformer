@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 7f;
     [SerializeField] public float jumpForce = 14f;
+    [SerializeField] public AudioSource jumpEffect;
     
     private enum MovementState  { idle, running, jumping, falling   }
 
@@ -57,8 +58,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        jumpEffect.Play();
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         isGrounded = false; // prevent double jump until we touch ground again
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

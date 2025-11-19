@@ -5,7 +5,7 @@ public class PlayerDeath : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rb;
-
+    [SerializeField] private AudioSource deathSound;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -16,6 +16,7 @@ public class PlayerDeath : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Trap"))
         {
+            deathSound.Play();
             Die();
         }
     }
