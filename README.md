@@ -6,6 +6,7 @@ This project demonstrates how to design, develop, and structure a side-scrolling
 Whether you’re a game developer learning Unity or building a base for your own platformer, this project provides a clean, scalable foundation to start from.
 
 ---
+<img width="705" height="460" alt="image" src="https://github.com/user-attachments/assets/90f3c2bb-264a-4e30-83f5-9372b2c45489" />
 
 ## 🚀 Features
 
