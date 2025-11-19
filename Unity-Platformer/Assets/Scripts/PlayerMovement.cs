@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 7f;
-    [SerializeField] public float jumpForce = 14f;
+    [SerializeField] public float jumpForce = 20f;
     [SerializeField] public AudioSource jumpEffect;
     
     private enum MovementState  { idle, running, jumping, falling   }
